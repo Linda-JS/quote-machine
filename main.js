@@ -13,6 +13,6 @@ function getQuote() {
     });
 }
 
-var newQuoteButton = document.querySelector("new-quote");
+var newQuoteButton = document.querySelector('.new-quote');
 
-newQuoteButton.addEventListener("click", getQuote);
+newQuoteButton.addEventListener('click', getQuote);
