@@ -6,13 +6,20 @@ function getQuote() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      displayQuote(data.message);
     })
     .catch(function () {
-      console.log("An error occured");
+      displayQuote("An error occured");
     });
 }
 
-var newQuoteButton = document.querySelector('.new-quote');
+function displayQuote(quote) {
+  var quoteText = document.querySelector(".quote-text");
+  quoteText.textContent = quote;
+}
 
-newQuoteButton.addEventListener('click', getQuote);
+var newQuoteButton = document.querySelector(".new-quote");
+
+newQuoteButton.addEventListener("click", getQuote);
+
+getQuote();
